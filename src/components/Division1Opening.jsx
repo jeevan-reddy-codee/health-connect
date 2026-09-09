@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import hcLogo from '../assets/Health connect.png';
 
 const Division1Opening = () => {
   return (
@@ -16,7 +17,7 @@ const Division1Opening = () => {
         transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
         style={{ marginBottom: '2rem' }}
       >
-        <img src="/Health connect.png" alt="Health Connect Logo" style={{ height: '120px' }} />
+        <img src={hcLogo} alt="Health Connect Logo" style={{ height: '120px' }} />
       </motion.div>
       
       <motion.h1 

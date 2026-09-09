@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import hcLogo from '../assets/Health connect.png';
 import { Watch, Activity, ShieldCheck, Heart, User, Code, Smartphone, Globe } from 'lucide-react';
 
 const Division5RealWorld = () => {
@@ -67,7 +68,7 @@ const Division5RealWorld = () => {
             </div>
 
             <div className={`card ${demoStep >= 3 ? 'active' : ''}`} style={{ zIndex: 1, textAlign: 'center', opacity: demoStep >= 3 ? 1 : 0.3, borderColor: demoStep === 3 ? 'var(--color-primary-blue)' : 'var(--color-border)', backgroundColor: 'var(--color-primary-blue)', color: 'white' }}>
-              <img src="/Health connect.png" alt="HC" style={{ height: '32px', filter: 'brightness(0) invert(1)', margin: '0 auto 0.5rem' }} />
+              <img src={hcLogo} alt="HC" style={{ height: '32px', filter: 'brightness(0) invert(1)', margin: '0 auto 0.5rem' }} />
               <div className="technical-heading" style={{ fontSize: '1rem', color: 'white' }}>Health Connect</div>
             </div>
 

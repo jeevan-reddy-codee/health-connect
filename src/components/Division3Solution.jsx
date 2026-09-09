@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Smartphone, Database, Shield, ArrowDown, Check, X } from 'lucide-react';
+import { ArrowDown, Check, X, Smartphone, Database, Shield } from 'lucide-react';
+import hcLogo from '../assets/Health connect.png';
 
 const Division3Solution = ({ activeStep, setActiveStep, nextDivision }) => {
   const [activeLayer, setActiveLayer] = useState(null);
@@ -63,7 +64,7 @@ const Division3Solution = ({ activeStep, setActiveStep, nextDivision }) => {
             whileHover={{ scale: 1.02 }}
             style={{ textAlign: 'center', backgroundColor: 'var(--color-primary-blue)', color: 'white', borderColor: activeLayer === 'platform' ? 'var(--color-deep-navy)' : '' }}
           >
-            <img src="/Health connect.png" alt="HC" style={{ height: '24px', filter: 'brightness(0) invert(1)', margin: '0 auto 0.5rem' }} />
+            <img src={hcLogo} alt="HC" style={{ height: '24px', filter: 'brightness(0) invert(1)', margin: '0 auto 0.5rem' }} />
             <div className="technical-heading" style={{ color: 'white' }}>HEALTH CONNECT</div>
           </motion.div>
 
@@ -130,7 +131,7 @@ const Division3Solution = ({ activeStep, setActiveStep, nextDivision }) => {
             {permissionState === 'requesting' && (
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} style={{ background: 'white', padding: '1rem', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                  <img src="/Health connect.png" alt="HC" style={{ height: '20px' }} />
+                  <img src={hcLogo} alt="HC" style={{ height: '20px' }} />
                   <strong>Fitness App wants to access:</strong>
                 </div>
                 <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', fontSize: '0.9rem' }}>

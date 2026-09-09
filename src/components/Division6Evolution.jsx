@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import hcLogo from '../assets/Health connect.png';
 import { Activity, Watch, Smartphone, Database, Heart, Split, Combine, ShieldCheck, Code, ArrowRight } from 'lucide-react';
 
 const Division6Evolution = () => {
@@ -104,7 +105,7 @@ const Division6Evolution = () => {
                   </svg>
                   
                   <div className="card" style={{ zIndex: 1, backgroundColor: 'var(--color-primary-blue)', color: 'white', padding: '1rem 2rem', borderRadius: '24px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <img src="/Health connect.png" alt="HC" style={{ height: '24px', filter: 'brightness(0) invert(1)' }} />
+                    <img src={hcLogo} alt="HC" style={{ height: '24px', filter: 'brightness(0) invert(1)' }} />
                     <span style={{ fontWeight: 600 }}>Health Connect</span>
                   </div>
                 </div>

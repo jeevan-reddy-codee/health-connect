@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import hcLogo from '../assets/Health connect.png';
 
 const Division8Conclusion = () => {
   const [step, setStep] = useState(0);
@@ -68,7 +69,7 @@ const Division8Conclusion = () => {
             >
               <div className="technical-heading">APPS</div>
               <div className="card" style={{ padding: '1rem 3rem', backgroundColor: 'var(--color-primary-blue)' }}>
-                <img src="/Health connect.png" alt="HC" style={{ height: '32px', filter: 'brightness(0) invert(1)' }} />
+                <img src={hcLogo} alt="HC" style={{ height: '32px', filter: 'brightness(0) invert(1)' }} />
               </div>
               <div className="technical-heading">DATA</div>
             </motion.div>
@@ -84,7 +85,7 @@ const Division8Conclusion = () => {
               transition={{ duration: 1.5, ease: "easeInOut" }}
               style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'absolute' }}
             >
-              <img src="/Health connect.png" alt="Health Connect Logo" style={{ height: '120px', marginBottom: '2rem' }} />
+              <img src={hcLogo} alt="Health Connect Logo" style={{ height: '120px', marginBottom: '2rem' }} />
               
               <AnimatePresence>
                 {step === 2 && (
