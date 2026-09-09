@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Health Connect Color Palette */
+  --color-primary-blue: #4285F4;
+  --color-deep-navy: #003144;
+  --color-white: #FFFFFF;
+  --color-soft-blue: #F3F7FF;
+  --color-light-blue: #E8F0FE;
+  
+  --color-primary-text: #12303B;
+  --color-secondary-text: #5F6F76;
+  --color-border: #DCE6EC;
+  
+  --color-active: var(--color-primary-blue);
+  --color-inactive: #B0BEC5;
+  --color-success: #34A853;
+  --color-error: #EA4335;
+
+  /* Typography */
+  --font-family-primary: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-primary);
+  background-color: var(--color-white);
+  color: var(--color-primary-text);
+  overflow: hidden; /* Hide scrollbars for presentation */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-deep-navy);
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.presentation-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.presentation-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-secondary-text);
+}
+
+.technical-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-deep-navy);
+}
+
+.technical-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-secondary-text);
+}
+
+.code-text {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9rem;
+  background-color: var(--color-soft-blue);
+  color: var(--color-deep-navy);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* Layout Utilities */
+.division-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* Reusable Components */
+.card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 49, 68, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(66, 133, 244, 0.1);
+  border-color: var(--color-primary-blue);
+}
+
+/* Presenter Controls */
+.progress-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  z-index: 100;
+}
+
+.progress-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  transition: background-color 0.3s ease;
+}
+
+.progress-dot.active {
+  background-color: var(--color-primary-blue);
+  transform: scale(1.2);
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.nav-button {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-secondary-text);
+  background-color: var(--color-white);
+  transition: all 0.2s ease;
+}
+
+.nav-button:hover:not(:disabled) {
+  border-color: var(--color-primary-blue);
+  color: var(--color-primary-blue);
+  background-color: var(--color-soft-blue);
+}
+
+.nav-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Interactive elements */
+.interactive-node {
+  cursor: pointer;
+}
+
+.interactive-node:focus-visible {
+  outline: 2px solid var(--color-primary-blue);
+  outline-offset: 4px;
+}
